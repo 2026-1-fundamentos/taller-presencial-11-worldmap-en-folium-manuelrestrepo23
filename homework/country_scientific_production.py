@@ -1,3 +1,5 @@
+  # country_scientific_production.py
+
 import os
 
 import folium  # type: ignore
@@ -50,7 +52,7 @@ def clean_countries(affiliations):
 
     affiliations = affiliations.copy()
     affiliations["countries"] = affiliations["countries"].str.replace(
-        "United States", "United States of America"
+          "United States", "United States of America"
     )
     return affiliations
 
@@ -92,7 +94,7 @@ def make_worldmap():
     """Función principal"""
 
     if not os.path.exists("files"):
-        os.makedirs("files")
+          os.makedirs("files")
 
     affiliations = load_affiliations()
     affiliations = remove_na_rows(affiliations)
@@ -104,7 +106,10 @@ def make_worldmap():
 
 
 if __name__ == "__main__":
-    make_worldmap()
+      make_worldmap()
+
     
-    
-    
+# https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/world-countries.json
+
+
+
